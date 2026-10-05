@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ddduwi0euwqoa"]
+
+[ext_resource type="Script" uid="uid://bff31ulqg8x0u" path="res://script/creditos.gd" id="1_ct8y5"]
+[ext_resource type="FontFile" uid="uid://bua2vksqo15sv" path="res://Star Crush.ttf" id="2_a3en7"]
+
+[node name="Creditos" type="Control" unique_id=1301816872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ct8y5")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=1807754935]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Textocreditos" type="Label" parent="." unique_id=2075691558]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Integrantes" type="Label" parent="." unique_id=653647098]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="voltar" type="Button" parent="." unique_id=1238054728]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 547.0
+offset_right = 676.0
+offset_bottom = 603.0
+theme_override_fonts/font = ExtResource("2_a3en7")
+theme_override_font_sizes/font_size = 50
+text = "VOLTAR
+"
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

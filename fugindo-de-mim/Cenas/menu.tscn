@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c8bbx0wsho7h4"]
+
+[ext_resource type="Script" uid="uid://lhe7ygxr5gg" path="res://script/menu.gd" id="1_vpgfy"]
+[ext_resource type="Texture2D" uid="uid://duy66jjknn86x" path="res://4mc3gjak2uka1.png" id="2_eheat"]
+[ext_resource type="FontFile" uid="uid://bua2vksqo15sv" path="res://Star Crush.ttf" id="3_fapvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nfbs"]
+bg_color = Color(0.9882353, 0.75686276, 0.49411765, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d784s"]
+bg_color = Color(0.9882353, 0.75686276, 0.49411765, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_124qo"]
+bg_color = Color(0.9882353, 0.75686276, 0.49411765, 0)
+
+[node name="menu" type="Control" unique_id=1882310071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vpgfy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=548212442]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+texture = ExtResource("2_eheat")
+
+[node name="Titulo" type="Label" parent="." unique_id=744323498]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.0
+offset_top = -159.0
+offset_right = 285.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 79
+text = "FUGINDO DE MIM"
+
+[node name="Iniciar" type="Button" parent="." unique_id=467154597]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 284.0
+offset_right = 651.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_6nfbs")
+text = "INICIAR"
+
+[node name="Sair" type="Button" parent="." unique_id=774388384]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 344.0
+offset_right = 630.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_d784s")
+text = "SAIR"
+
+[node name="Creditos" type="Button" parent="." unique_id=1993691174]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 396.0
+offset_right = 675.0
+offset_bottom = 444.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_124qo")
+text = "CRÉDITOS"
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
