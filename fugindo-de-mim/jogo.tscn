@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://coufby68i3lfd"]
+
+[sub_resource type="TileSet" id="TileSet_so80e"]
+
+[node name="jogo" type="Node2D"]
+
+[node name="mundo" type="Node2D" parent="."]
+
+[node name="chão" type="TileMapLayer" parent="mundo"]
+tile_set = SubResource("TileSet_so80e")
+
+[node name="pista" type="TileMapLayer" parent="mundo"]
+
+[node name="água" type="TileMapLayer" parent="mundo"]
+
+[node name="decoração" type="TileMapLayer" parent="mundo"]

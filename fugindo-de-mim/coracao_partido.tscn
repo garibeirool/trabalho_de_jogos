@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://nee76rbdgrh8"]
+
+[ext_resource type="Script" uid="uid://dr8q0om2bpjka" path="res://inimigo.gd" id="1_y4onr"]
+
+[node name="CoracaoPartido" type="CharacterBody2D"]
+script = ExtResource("1_y4onr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ColisaoCoracao" type="CollisionShape2D" parent="."]
+
+[node name="AreaDano" type="Area2D" parent="."]
+
+[node name="ColisaoDano" type="CollisionShape2D" parent="AreaDano"]
